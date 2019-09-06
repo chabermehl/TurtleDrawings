@@ -1,6 +1,8 @@
 import turtle
 import random
 
+MAX_SQUARES = 250
+MAX_LENGTH = 300
 MAX_CORD = 200
 MIN_CORD = -200
 
@@ -19,7 +21,7 @@ def moveCursor(x, y, t):
 
 
 def generateRandoms():
-    randSide = random.randint(0, 301)
+    randSide = random.randint(0, MAX_LENGTH)
     randX = random.randint(MIN_CORD, MAX_CORD)
     randY = random.randint(MIN_CORD, MAX_CORD)
     return randSide, randX, randY
@@ -33,11 +35,14 @@ def colorPicker():
 
 
 def main():
-    randAmount = random.randint(10, 100)
+    # turtle initializations
     t = turtle.Turtle()
+    turtle.colormode(255)
     t.ht()
     t.speed(0)
-    turtle.colormode(255)
+
+    # random amount of squares with pretty colors
+    randAmount = random.randint(1, MAX_SQUARES)
     for i in range(randAmount):
         randoms = generateRandoms()
         color = colorPicker()
