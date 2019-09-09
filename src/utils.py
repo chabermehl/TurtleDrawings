@@ -1,3 +1,7 @@
+"""
+Utility functions used throughout the src code
+"""
+
 import random
 
 # global constants
