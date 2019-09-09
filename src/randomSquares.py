@@ -1,10 +1,12 @@
 import turtle
 import random
 
+# non library imports
+import utils
+
+# global constants
 MAX_SQUARES = 250
 MAX_LENGTH = 300
-MAX_CORD = 200
-MIN_CORD = -200
 
 
 def drawSquare(side, t):
@@ -27,13 +29,6 @@ def generateRandoms():
     return randSide, randX, randY
 
 
-def colorPicker():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    return r, g, b
-
-
 def main():
     # turtle initializations
     t = turtle.Turtle()
@@ -44,13 +39,13 @@ def main():
     # random amount of squares with pretty colors
     randAmount = random.randint(1, MAX_SQUARES)
     for i in range(randAmount):
-        randoms = generateRandoms()
-        color = colorPicker()
+        nextCoord = utils.randomCoord()
+        color = utils.colorPicker()
         t.pencolor(color)
         t.fillcolor(color)
-        moveCursor(randoms[1], randoms[2], t)
+        moveCursor(nextCoord[0], nextCoord[1], t)
         t.begin_fill()
-        drawSquare(randoms[0], t)
+        drawSquare(random.randint(0, MAX_LENGTH), t)
         t.end_fill()
     turtle.done()
 
