@@ -16,3 +16,9 @@ def randomCoord():
     randX = random.randint(MIN_CORD, MAX_CORD)
     randY = random.randint(MIN_CORD, MAX_CORD)
     return randX, randY
+
+
+def moveCursor(x, y, t):
+    t.pu()
+    t.goto(x, y)
+    t.pd()

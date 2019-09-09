@@ -16,12 +16,6 @@ def drawSquare(side, t):
     t.seth(random.randint(0, 360))
 
 
-def moveCursor(x, y, t):
-    t.pu()
-    t.goto(x, y)
-    t.pd()
-
-
 def main():
     # turtle initializations
     t = turtle.Turtle()
@@ -36,7 +30,7 @@ def main():
         color = utils.colorPicker()
         t.pencolor(color)
         t.fillcolor(color)
-        moveCursor(nextCoord[0], nextCoord[1], t)
+        utils.moveCursor(nextCoord[0], nextCoord[1], t)
         t.begin_fill()
         drawSquare(random.randint(0, MAX_LENGTH), t)
         t.end_fill()
