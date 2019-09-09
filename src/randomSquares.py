@@ -22,13 +22,6 @@ def moveCursor(x, y, t):
     t.pd()
 
 
-def generateRandoms():
-    randSide = random.randint(0, MAX_LENGTH)
-    randX = random.randint(MIN_CORD, MAX_CORD)
-    randY = random.randint(MIN_CORD, MAX_CORD)
-    return randSide, randX, randY
-
-
 def main():
     # turtle initializations
     t = turtle.Turtle()
