@@ -2,6 +2,11 @@
 
 CLI tool for drawing randomly orientated and colored shapes with turtle graphics
 
+## TODO
+
+- [ ] Add more shapes i.e. triangle, circle etc.
+- [ ] Add something like leaves or snowflakes
+
 ## Usage
 
 `python main.py <number of shapes> <shape>`
