@@ -7,9 +7,10 @@ import utils
 snowflakes = []
 
 
-def makeSnow(flakes, size, t):
+def makeSnow(flakes, size, stroke, t):
     snowCount = 0
     noFlake = 0
+    t.pensize(stroke)
     while(snowCount < flakes):
         nextCoord = utils.randomCoord()
         if(allowFlake(nextCoord, size)):

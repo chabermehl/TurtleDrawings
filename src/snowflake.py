@@ -1,3 +1,5 @@
+import random
+
 # non library imports
 import utils
 
@@ -22,10 +24,11 @@ def snowflake(size, t):
         t.left(45)
 
 
-def drawFlakes(numFlakes, size, t):
+def drawFlakes(numFlakes, size, stroke, t):
     """
     Generates a specified number of snowflakes in random locations
     """
+    t.pensize(stroke)
     for i in range(numFlakes):
         nextCoord = utils.randomCoord()
         color = utils.colorPicker()
