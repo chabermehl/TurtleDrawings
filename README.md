@@ -9,7 +9,7 @@ CLI tool for drawing randomly orientated and colored shapes with turtle graphics
 
 ## Usage
 
-`python main.py <shape to be generated> <amount of shape> <size of shape>`
+`python main.py <shape flag> <amount> <size> <stroke>`
 
 ### Help
 
@@ -21,10 +21,15 @@ CLI tool for drawing randomly orientated and colored shapes with turtle graphics
 `python main.py -s 32 101`  
 `python main.py --squares 999 57`
 
+### Random Flakes
+
+`python main.py -f 10 15 5`  
+`python main.py --flakes 10 15 5`
+
 ### Let It Snow
 
-`python main.py -l 32 101`  
-`python main.py --letitsnow 12 22`
+`python main.py -l 32 101 5`  
+`python main.py --letitsnow 12 22 5`
 
 ## Outputs
 
