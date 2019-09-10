@@ -3,9 +3,6 @@ import random
 # non library imports
 import utils
 
-# global constants
-MAX_LENGTH = 300
-
 
 def drawSquare(side, t):
     for i in range(4):
@@ -14,7 +11,7 @@ def drawSquare(side, t):
     t.seth(random.randint(0, 360))
 
 
-def drawSquares(numSquares, t):
+def drawSquares(numSquares, maxLength, t):
     '''
     Draws a specified number of squares in random orientations with random colors
     '''
@@ -25,5 +22,5 @@ def drawSquares(numSquares, t):
         t.fillcolor(color)
         utils.moveCursor(nextCoord[0], nextCoord[1], t)
         t.begin_fill()
-        drawSquare(random.randint(0, MAX_LENGTH), t)
+        drawSquare(random.randint(0, maxLength), t)
         t.end_fill()
