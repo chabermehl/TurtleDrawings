@@ -30,3 +30,10 @@ CLI tool for drawing randomly orientated and colored shapes with turtle graphics
 
 ### Squares
 ![Squares Output](https://github.com/chabermehl/TurtleDrawings/blob/master/Images/randomSquaresOut.PNG)
+
+
+### Let It Snow
+
+This image does not do `Let It Snow` justice as it is a dynamic turtle graphics program that deletes and adds snowflakes constantly to simulate snowfall but this is what you could end up with at the end of the program.
+
+![SnowFlakes](https://github.com/chabermehl/TurtleDrawings/blob/master/Images/LetItSnow1.PNG)
