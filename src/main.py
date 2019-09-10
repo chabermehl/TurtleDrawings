@@ -4,6 +4,7 @@ import sys
 
 import randomSquares
 import snowflake
+import makeSnow
 
 
 def main():
@@ -26,7 +27,7 @@ def main():
         randomSquares.drawSquares(args.amount, t)
         turtle.done()
     elif(args.snowflake):
-        snowflake.snowflake(20, t)
+        makeSnow.makeSnow(t)
         turtle.done()
 
 
