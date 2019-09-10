@@ -5,8 +5,8 @@ Utility functions used throughout the src code
 import random
 
 # global constants
-MAX_CORD = 200
-MIN_CORD = -200
+MAX_CORD = 300
+MIN_CORD = -300
 
 
 def colorPicker():

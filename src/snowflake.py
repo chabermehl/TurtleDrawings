@@ -1,3 +1,7 @@
+# non library imports
+import utils
+
+
 def branch(size, t):
     t.forward(size)
     for i in range(3):
@@ -16,3 +20,15 @@ def snowflake(size, t):
     for i in range(8):
         branch(size, t)
         t.left(45)
+
+
+def drawFlakes(numFlakes, size, t):
+    """
+    Generates a specified number of snowflakes in random locations
+    """
+    for i in range(numFlakes):
+        nextCoord = utils.randomCoord()
+        color = utils.colorPicker()
+        t.pencolor(color)
+        utils.moveCursor(nextCoord[0], nextCoord[1], t)
+        snowflake(size, t)
