@@ -11,6 +11,7 @@ def main():
     # turtle initializations
     t = turtle.Turtle()
     turtle.colormode(255)
+    turtle.screensize(400, 400)
     t.ht()
     t.speed(0)
 
@@ -27,7 +28,7 @@ def main():
         randomSquares.drawSquares(args.amount, t)
         turtle.done()
     elif(args.snowflake):
-        makeSnow.makeSnow(t)
+        makeSnow.makeSnow(args.amount, 20, t)
         turtle.done()
 
 
