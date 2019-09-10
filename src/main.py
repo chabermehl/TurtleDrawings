@@ -19,16 +19,17 @@ def main():
     parser = argparse.ArgumentParser()
 
     parser.add_argument("amount", nargs="?", help="Number of chosen shape to generate", type=int)
+    parser.add_argument("size", nargs="?", help="Set the size of the shape", type=int)
     parser.add_argument("-s", "--squares", help="Generates random squares in turtle graphics", action="store_true")
-    parser.add_argument("--snowflake", help="Generate a snow flake", action="store_true")
+    parser.add_argument("-l", "--letitsnow", help="Create a snow falling effect", action="store_true")
 
     args = parser.parse_args()
 
     if(args.squares):
-        randomSquares.drawSquares(args.amount, t)
+        randomSquares.drawSquares(args.amount, args.size, t)
         turtle.done()
-    elif(args.snowflake):
-        makeSnow.makeSnow(args.amount, 20, t)
+    elif(args.letitsnow):
+        makeSnow.makeSnow(args.amount, args.size, t)
         turtle.done()
 
 
